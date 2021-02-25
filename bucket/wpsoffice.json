@@ -1,0 +1,31 @@
+https://pacakge.cache.wpscdn.cn/wps/download/W.P.S.10314.12012.2019.exe
+{
+    "version": "10314.12012.2019",
+    "description": "WPS Office 国内版",
+    "homepage": "https://www.wps.cn",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.wps.cn/privacy/full_useragreement/"
+    },
+    "url": "https://pacakge.cache.wpscdn.cn/wps/download/W.P.S.10314.12012.2019.exe",
+    "hash": "7e31c48c737fed8eee2d9cdece7c3a1f8d5ec8d2dcadce807464ec11bd6db5fb",
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\$fname\" -Switches '-t#'",
+        "Remove-Item \"$dir\\*\" -Exclude '4.7z' -Recurse",
+        "Expand-7zipArchive \"$dir\\4.7z\" -ExtractDir 'office6' -Removal"
+    ],
+    "bin": "wpsoffice.exe",
+    "shortcuts": [
+        [
+            "wpsoffice.exe",
+            "WPS Office"
+        ]
+    ],
+    "checkver": {
+        "url": "https://pc.wps.cn",
+        "regex": "WPSOffice_([\\d.]+)\\.exe"
+    },
+    "autoupdate": {
+        "url": "https://pacakge.cache.wpscdn.cn/wps/download/W.P.S.$version.exe"
+    }
+}
