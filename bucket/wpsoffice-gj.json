@@ -7,7 +7,7 @@
         "url": "https://www.wps.com/eula"
     },
     "url": "https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/11.2.0.9984/WPSOffice_11.2.0.9984.exe",
-    "hash": "7e31c48c737fed8eee2d9cdece7c3a1f8d5ec8d2dcadce807464ec11bd6db5fb",
+    "hash": "b97b11efd7ef1a06a90e7c8a59c8fbd144b1defef7fc58f2616f5e54a5d00b28",
     "pre_install": [
         "Expand-7zipArchive \"$dir\\$fname\" -Switches '-t#'",
         "Remove-Item \"$dir\\*\" -Exclude '4.7z' -Recurse",
